@@ -5,7 +5,7 @@ import com.day04p02.StackLinkedList.Stack;
 
 public class Main {
     public static void main(String[] args) {
-        Stack stack = new Stack();
+    	StackLinkedList stack = new StackLinkedList();
 
         stack.push(10.0);
         stack.push(20.0);
