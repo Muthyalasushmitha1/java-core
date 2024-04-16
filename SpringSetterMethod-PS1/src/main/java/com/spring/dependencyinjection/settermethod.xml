@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+<!--<context:property-placeholder location="com/spring/dependencyinjection/db.properties"/>>
+-->        
+  <bean id="battery" class="com.spring.dependencyinjection.Battery">
+        <property name="productId" value="1" />
+        <property name="productName" value="AAA Battery" />
+        <property name="price" value="5.99" />
+        <property name="capacity" value="500" />
+    </bean>
+ 
+    
+    <bean id="disc" class="com.spring.dependencyinjection.Disc">
+        <property name="productId" value="2" />
+        <property name="productName" value="DVD Disc" />
+        <property name="price" value="9.99" />
+        <property name="format" value="DVD-R" />
+    </bean>
+</beans>      

@@ -1,0 +1,9 @@
+<!-- spring-config.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define the ShoppingCart bean with prototype scope -->
+    <bean id="shoppingCart" class="com.spring.shopping.ShoppingCart" scope="prototype"/>
+</beans>
