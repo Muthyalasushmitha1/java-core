@@ -1,0 +1,38 @@
+
+Standalone:
+
+cd C:\axonserver-enterprise-4.5.20-bin\axonserver-enterprise
+java -jar axonserver.jar
+
+------------------------------------------------------------
+
+docker run -d --name axonserver -p 8024:8024 -p 8124:8124 axoniq/axonserver:4.5.8
+
+------------------------------------------------------------
+
+Create Folders:
+
+C:\docker-data\data
+C:\docker-data\eventdata
+C:\docker-data\config
+
+------------------------------------------------------------
+
+create a file axonserver.properties in config folder:
+
+	server.port=8024
+	axoniq.axonserver.standalone=true
+	axoniq.axonserver.name=MyAxonServer
+	axoniq.axonserver.hostname=localhost
+	axoniq.axonserver.devmode.enabled=true
+
+------------------------------------------------------------
+
+docker run -d --name axonserver -p 8024:8024 -p 8124:8124 -v "C:\docker-data\data":/data -v "C:\docker-data\eventdata":/eventdata -v "C:\docker-data\config":/config axoniq/axonserver:4.5.8
+
+docker ps
+
+docker logs <id> -f
+
+------------------------------------------------------------
+
